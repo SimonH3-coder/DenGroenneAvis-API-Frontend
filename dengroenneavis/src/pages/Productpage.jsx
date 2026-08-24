@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+
 import { Category } from "../component/category/Category";
+import { Product } from "../component/product/Product";
  export function Productpage() {
     
 
@@ -8,6 +9,7 @@ import { Category } from "../component/category/Category";
         <>
     <h1>Productpage</h1>
     <Category/>
+    <Product/>
     </>
     )
 }
