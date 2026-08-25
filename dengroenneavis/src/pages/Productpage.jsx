@@ -1,5 +1,5 @@
 
-import { Category } from "../component/category/Category";
+import { Navigation } from "../component/navigation/Navigation";
 import { Product } from "../component/product/Product";
  export function Productpage() {
     
@@ -8,7 +8,7 @@ import { Product } from "../component/product/Product";
     return (
         <>
     <h1>Productpage</h1>
-    <Category/>
+    <Navigation/>
     <Product/>
     </>
     )

@@ -1,4 +1,4 @@
-// import { Navlink } from "react-router";
+ import { NavLink } from "react-router";
 import style from "./Footer.module.scss";
 
 export function Footer() {
@@ -27,7 +27,7 @@ export function Footer() {
                 <p>Vi støtter på organisatorisk plan om FM's verdensmål 
                     og har derfor besluttet at en del af overskuddet går
                     direkte til verdensmål nr. 13; Kilmahandling</p>
-                    {/* <Navlink to="/verdensmaal" >Læs mere om verdensmålene her</Navlink> */}
+                    { <NavLink to="/verdensmaal" >Læs mere om verdensmålene her</NavLink>}
                 </section>
             </footer>
     )

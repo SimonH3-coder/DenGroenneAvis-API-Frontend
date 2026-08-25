@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route} from "react-router";
 import { Productpage} from "./pages/Productpage";
+import { Frontpage } from "./pages/Frontpage";
 import { Mainlayout } from "./layout/Mainlayout";
 
 function App() {
@@ -10,7 +11,9 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route element={<Mainlayout />}>
-      <Route path="/" element={<Productpage />} />
+      <Route path="/" element={<Frontpage />} />
+      <Route path="/products" element={<Productpage />} />
+      
 
       </Route>
       
