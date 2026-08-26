@@ -33,14 +33,6 @@ export function Product() {
 
 
             </div>
-    
-    
-
-        
-        
-
-      
-
     ))}
     </div>
         </>
