@@ -5,10 +5,11 @@ import { Categogrydropdown } from "../../component/categogrydropdown/Categogrydr
 import icons8mail from "../../assets/icons8mail.png";
 import icons8infosquared from "../../assets/icons8infosquared.png"; 
 import icons8testaccount from "../../assets/icons8testaccount.png";
+import style from "./Header.module.scss";
 
 export function Header() {
     return (
-        <div>
+        <div className={style.headerstyle}>
         <img src={Logogroenne} alt="Logo" />
             <Categogrydropdown/>
 

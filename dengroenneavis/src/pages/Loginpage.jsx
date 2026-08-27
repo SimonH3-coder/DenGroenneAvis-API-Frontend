@@ -2,47 +2,72 @@ import banner_image2 from "../assets/banner_image2.jpg";
 import banner_image3 from "../assets/banner_image3.jpg";
 import icons8atsign1 from "../assets/icons8atsign1.png";
 import icons8atsing2 from "../assets/icons8atsign2.png";
-import { NavLink } from "react-router";
+import { Navigate, NavLink } from "react-router";
+import { useState } from "react";
 
 export function Loginpage() {
-    const login = async (event) => {
-        event.preventDefault();
-        const email = event.target.email.value;
-        const password = event.target.password.value;
-        const body = await Json.stringify({
-            email: email,
-            password: password,
-        })
+const [Login, setLogin] = useState(false);
+const [error, setError] = useState("");
+
+
+
+    async function login(event) {
+       event.preventDefault();
+       setError("");
+
+       const formData = new FormData(event.currentTarget);
 
         const res = await fetch('http://localhost:4000/api/login', {
         method: 'POST',
-        body: body,
-        })
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            email: formData.get('email'),
+            password: formData.get('password'),
+        }),
+    });
 
-        console.log(res);
-        console.log("email og password", email, password);
+    if (!res.ok) {
+        setError("Hvis Email eller password er skrevet forkert.")
+        return;
     }
+
+    setLogin(true);
+}
+
+if (Login) {
+    return <Navigate to="/accountprofile" />
+}
+
+      
 
 
     return (
         <>
          <h1>Velkommen tilbage</h1>
          <p>Email</p>
-         <form onSubmit={(e) => login(e)}> 
+         <form onSubmit={login}> 
             <input 
-            type="text" 
+            id="email"
+            type="email" 
             name="email" 
-            placeholder="Din email..." />
+            placeholder="Din email..." 
+            required/>
             <img src={icons8atsign1} alt="email" />
 
             <p>Password</p>
             <input 
+            id="password"
             type="password" 
             name="password" 
-            placeholder="Dit password..." />
+            placeholder="Dit password..." 
+            required/>
             <img src={icons8atsing2} alt="password" />
             </form>
-            <p>Har du ikke allerede en konto? Klik 
+
+            {error && <p>{error}</p>}
+            <p>Har du ikke allerede en konto?{" "} Klik 
                 <NavLink to="/signup">her</NavLink> 
                 for at gå til sign up </p>
                 <button type="submit">Login</button>

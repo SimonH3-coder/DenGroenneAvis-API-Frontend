@@ -1,0 +1,19 @@
+@use "../../globals.scss" as globals;
+
+.footerstyle {
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    background-color : globals.$color-light-green;
+    gap: 8px;
+    color: globals.$color-white-white;
+    margin-top: auto;
+
+    section {
+        display: flex;
+        flex-direction: column;
+        a {
+            color: globals.$color-white-white;
+        }
+    }
+
+}

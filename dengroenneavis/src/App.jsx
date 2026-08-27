@@ -4,6 +4,8 @@ import { Productpage} from "./pages/Productpage";
 import { Frontpage } from "./pages/Frontpage";
 import { Loginpage } from "./pages/Loginpage";
 import { Mainlayout } from "./layout/Mainlayout";
+import { Signuppage } from "./pages/Signuppage";
+import { Accountprofilpage} from "./pages/Accountprofilpage";
 
 function App() {
   
@@ -17,6 +19,8 @@ function App() {
       <Route path="/products" element={<Productpage />} />
       <Route path="/productdetails" element={<Productdetailspage />} />
       <Route path="/login" element={<Loginpage />} />
+      <Route path="/signup" element={<Signuppage />} />
+      <Route path="/accountprofile" element={<Accountprofilpage />} />
       
 
       </Route>
