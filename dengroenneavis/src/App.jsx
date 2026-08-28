@@ -6,6 +6,7 @@ import { Loginpage } from "./pages/Loginpage";
 import { Mainlayout } from "./layout/Mainlayout";
 import { Signuppage } from "./pages/Signuppage";
 import { Accountprofilpage} from "./pages/Accountprofilpage";
+import { Annoncepage } from "./pages/Annoncepage";
 
 function App() {
   
@@ -17,10 +18,11 @@ function App() {
       <Route element={<Mainlayout />}>
       <Route path="/" element={<Frontpage />} />
       <Route path="/products" element={<Productpage />} />
-      <Route path="/productdetails" element={<Productdetailspage />} />
+      <Route path="/productsdetail" element={<Productdetailspage />} />
       <Route path="/login" element={<Loginpage />} />
       <Route path="/signup" element={<Signuppage />} />
       <Route path="/accountprofile" element={<Accountprofilpage />} />
+      <Route path="/annonce" element={<Annoncepage />} />
       
 
       </Route>

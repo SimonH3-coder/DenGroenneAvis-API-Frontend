@@ -1,28 +1,51 @@
 @use '../../globals.scss' as globals;
 
 .headerstyle {
-    height: 7vh;
+    min-height: 72px;
+    padding: 0 8%;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 18px;
     background-color: globals.$color-white-white;
-    figure {
-        img {
-            width: 10vw;
+    border-bottom: 8px solid globals.$color-gray-white;
+   
+    //Logo
+    img {
+    
+        height: auto;
+        justify-self: start;
+    }
+
+    //Dropdown
+    div {
+        select {
+            width: 130px;
+            height: 30px;
+            padding: 0 8px;
+            border: 2px solid globals.$color-light-green;
+            background-color: globals.$color-white-white;
+            font-size: 12px;
+            cursor: pointer;
         }
     }
 
-    ul { display: flex;
-        gap: 14px;
-        justify-content: end;
-        margin: 32px;
-        li {
-            list-style-type: none
-            a {
-                text-decoration: none;
-                color:globals.$color-white-white;
-            }
+    // Lav en annonce knap
+    button {
+        width: 94px;
+        height: 35px;
+        border: none;
+        background-color: globals.$color-light-green;
+        color: globals.$color-white-white;
+        font-size: 12px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: globals.$color-dark-green;
         }
     }
-
-
 }
+
+
+ 
+

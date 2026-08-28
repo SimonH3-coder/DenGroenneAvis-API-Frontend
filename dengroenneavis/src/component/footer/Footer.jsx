@@ -10,7 +10,7 @@ export function Footer() {
                     og få de seneste klima opdateringer direkte i din indbakke
                 </p>
                 <form>
-                     <input type="" placeholder='email' />
+                     <input type="email" text="email" placeholder='email' />
             <input type="submit" value="Tilmeld" />
                 </form>
 

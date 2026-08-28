@@ -10,7 +10,7 @@ export function useFetch(url) {
             try {
                 const res = await fetch(url);
                 if (!res.ok) {
-                    throw new error ('Failed to fetch data');
+                    throw new Error ('Failed to fetch data');
                 }
                 const data = await res.json();
                 setData(data);

@@ -2,18 +2,79 @@
 
 .footerstyle {
     display: grid;
-    grid-template-columns:  1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     background-color : globals.$color-light-green;
-    gap: 8px;
+    gap: 80px;
+    padding: 28px 10%;
+    margin-top: auto;
     color: globals.$color-white-white;
     margin-top: auto;
 
     section {
         display: flex;
         flex-direction: column;
-        a {
-            color: globals.$color-white-white;
-        }
+        align-items: flex-start;
     }
 
+    h3 {
+        margin: 0 0 22px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    p {
+        max-width: 280px;
+        margin: 0 0 4px;
+        font-size: 12px;
+        line-height: 16px;
+        color: globals.$color-dark-dark;
+    }
+        a {
+            margin: 18px;
+            color: globals.$color-white-white;
+            font-size: 12px;
+            text-decoration: underline;
+        }
+        form {
+        display: flex;
+        width: 305px;
+        margin-top: 10px;
+    }
+
+    form input[type="email"],
+    form input[type="text"] {
+        flex: 1;
+        min-width: 0;
+        height: 25px;
+        padding: 0 8px;
+        border: none;
+        background-color: globals.$color-gray-white;
+    }
+      form input[type="submit"] {
+        height: 28px;
+        padding: 0 12px;
+        border: none;
+        color: globals.$color-white-white;
+        background-color: globals.$color-dark-green;
+        cursor: pointer;
+    }
+       form input[type="submit"]:hover {
+        background-color: darken(globals.$color-dark-green, 8%);
+    }
 }
+
+@media (max-width: 700px) {
+    .footerstyle {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 28px 8%;
+    }
+
+    .footerstyle form {
+        width: 100%;
+        max-width: 305px;
+    }
+
+
+
+    }
+
